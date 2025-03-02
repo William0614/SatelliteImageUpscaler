@@ -28,8 +28,12 @@ Center pixel has 0 weight.
 5. Apply the filter to the RGB image.
 
 ## Deep Learning Models
-
 Super Resolution
+
+## Edge Detection
+Apply [Canny edge detection](https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html) 
+on LiDAR depth image to assign higher weights to edge values and increase the resolution by 
+increasing contrast between pixel around edges and the edge pixels.
 
 ## Result
 [Result](https://github.com/William0614/SatelliteImageUpscaler/blob/main/out/super_bilateral.jpeg) 
