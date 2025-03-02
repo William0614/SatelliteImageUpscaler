@@ -12,6 +12,11 @@ Assign weights to filter as the softmax of the negative absolute difference of t
 Center pixel has 0 weight.
 Filter is normalised to sum up to 1.
 
+1. Calculate the absolute depth difference for each pixel in the filter box.
+2. Calculate the exponential of the negative depth differences to assign more weights to pixels with higher depth similarity.
+3. Normalise the filter.
+4. Apply the filter to the RGB image.
+
 ## Deep Learning Models
 
 Super Resolution
