@@ -12,7 +12,6 @@ For each pixel, assign colour as a mix of the colours of the pixels surrounding 
 Filter size is 3x3. 
 Assign weights to filter as the softmax of the negative absolute difference of the depths.
 Center pixel has 0 weight.
-Filter is normalised to sum up to 1.
 
 1. Calculate the absolute depth difference for each pixel in the filter box.
 2. Calculate the exponential of the negative depth differences to assign more weights to pixels with higher depth similarity.
