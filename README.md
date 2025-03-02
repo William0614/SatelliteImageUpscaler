@@ -1,5 +1,13 @@
 # Satellite Image Upscaler
 
+## Demo
+```
+git clone https://github.com/William0614/SatelliteImageUpscaler.git
+cd SatelliteImageUpscaler
+pip installl -r requiremnts.txt
+```
+Run the jupyter notebook SuperResolutionUpscale.ipynb.
+
 ## Implementation
 1. Upscale RGB image to LiDAR image size using 
 [bicubic interpolation](https://docs.opencv.org/4.x/da/d6e/tutorial_py_geometric_transformations.html)
