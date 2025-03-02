@@ -32,5 +32,6 @@ Center pixel has 0 weight.
 Super Resolution
 
 ## Result
-
+[Result](https://github.com/William0614/SatelliteImageUpscaler/blob/main/out/super_bilateral.jpeg) 
+can be found in the out folder.
 
