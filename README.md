@@ -9,9 +9,9 @@ pip installl -r requiremnts.txt
 Run the jupyter notebook SuperResolutionUpscale.ipynb.
 
 ## Implementation
-1. Upscale RGB image to LiDAR image size using 
+1. Upscale RGB image using 
 [bicubic interpolation](https://docs.opencv.org/4.x/da/d6e/tutorial_py_geometric_transformations.html)
-2. Enhance upscaled RGB image with 
+2. Further enhance by upscaling RGB image with 
 [super-resolution](https://www.kaggle.com/models/kaggle/esrgan-tf2/tensorFlow2/esrgan-tf2/1?tfhub-redirect=true )
 3. Filter enhanced image using joint bilateral filtering.
 
