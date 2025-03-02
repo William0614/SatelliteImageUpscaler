@@ -5,26 +5,16 @@
 2. Enhance upscaled RGB image with [super-resolution]()
 3. Filter enhanced image using joint bilateral filtering.
 
-## Interpolations
-
-Nearest Neighbour
-
-Bilinear
-
-Bicubic
-
-
-
-## Filters
-
-Gaussian
-
-Bilateral
+## Bilateral Joint Filter
+For each pixel, assign colour as a mix of the colours of the pixel surrounding it.
+Filter size 3x3. 
+Assign weights to filter as the softmax of the absolute difference of the depths.
+Center pixel has 0 weight.
+Filter is normalised to sum up to 1.
 
 ## Deep Learning Models
 
 Super Resolution
-
 
 ## Result
 
