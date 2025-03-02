@@ -29,7 +29,7 @@ else:
 depth = cv2.GaussianBlur(depth, (3, 3), 0)
 edges = cv2.Canny(depth, 40, 70, 20)
 # edges = cv2.dilate(edges, np.ones((3, 3)), iterations=1)
-cv2.imwrite('depth_edges.jpg', edges)
+cv2.imwrite('out/depth_edges.jpg', edges)
 
 img_interp = cv2.resize(img_rgb, depth.shape[::-1], interpolation=cv2.INTER_CUBIC)
 img_nn = cv2.resize(img_rgb, depth.shape[::-1], interpolation=cv2.INTER_NEAREST)
@@ -50,10 +50,10 @@ img_sharp = cv2.filter2D(img_nn, -1, kernel)
 #                          img_sharp)
 
 img_out = cv2.bitwise_and(img_interp, img_interp, mask=255-edges) + cv2.bitwise_and(img_sharp, img_sharp, mask=edges)
-cv2.imwrite('canny_sharp.jpg', img_out)
+cv2.imwrite('out/canny_sharp.jpg', img_out)
 
 # Blend sharpened image using the edge mask
 edges_coloured = cv2.cvtColor(edges, cv2.COLOR_GRAY2BGR)
 alpha = 0.3  # Controls the sharpening intensity
 output = np.where(edges_coloured>0, img_sharp*alpha + img_interp*(1-alpha), img_interp).astype(np.uint8)
-cv2.imwrite('canny_sharp_blended.jpg', output)
+cv2.imwrite('out/canny_sharp_blended.jpg', output)

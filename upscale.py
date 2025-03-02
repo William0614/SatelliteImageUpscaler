@@ -26,5 +26,5 @@ for i in range(h):
         filter /= np.sum(filter)
         for c in range(3):
             img_up[i, j, c] = np.sum(img_nn[y1:y2, x1:x2, c] * filter)
-cv2.imwrite('out_nn.jpg', img_up)
+cv2.imwrite('out/out_nn.jpg', img_up)
 
